@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f0fff4; /* Mint Cream Background */
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #68d391; 
+  border-radius: 10px;
+}
+
+/* Track Plant button*/
+.btn-submit{
+  background:#16a34a;
+  color:#fff;
+  padding:.6rem .9rem;
+  border-radius:.5rem;
+  font-weight:600;
+  border:0;
+  cursor:pointer;
+  box-shadow:0 2px 0 rgba(0,0,0,.06);
+}
+.btn-submit:hover{ background:#15803d; } 
+.btn-submit:active{ transform:translateY(1px); }
+.btn-submit:focus{ outline:3px solid rgba(16,185,129,.18); outline-offset:3px; }
+
+/* Empty state (flashy) */
+.empty-state{
+  background: linear-gradient(90deg, rgba(134,239,172,0.12), rgba(167,243,208,0.06));
+  border: 1px solid rgba(34,197,94,0.18);
+  color:#065f46;
+  padding:1rem;
+  border-radius:.75rem;
+  display:flex;
+  gap:.75rem;
+  align-items:center;
+  justify-content:center;
+  font-weight:600;
+  box-shadow:0 6px 18px rgba(16,185,129,0.06);
+  animation: pulse-glow 2.5s infinite;
+}
+
+@keyframes pulse-glow{ 0%{ box-shadow:0 0 0 rgba(16,185,129,0.06);}50%{ box-shadow:0 12px 30px rgba(16,185,129,0.09);}100%{ box-shadow:0 0 0 rgba(16,185,129,0.06);} }
+
+/* Records list */
+.records-container{ display:flex; flex-direction:column; gap:.5rem; }
+.record-item{ background:linear-gradient(180deg,#ffffff,#f8fffa); border-radius:.5rem; padding:.6rem; border:1px solid #e6ffed; display:flex; justify-content:space-between; align-items:center; box-shadow:0 2px 6px rgba(16,185,129,0.03); }
+.record-item .meta{ font-size:.85rem; color:#065f46; opacity:.9 }
+.record-empty{ color:#6b7280; font-style:italic }
+
